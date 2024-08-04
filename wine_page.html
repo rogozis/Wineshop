@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEEFEATER</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="png\free-icon-wine-glass-763089.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Jomhuria&family=Kadwa:wght@400;700&family=Kaisei+Decol&family=Nanum+Myeongjo&family=Roboto+Slab:wght@100..900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="css\wine_page_design.css">
+    
+    <!-- JS -->
+    <script defer src="js\wine_page_script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="brand">
+                <h1 class="title">BEEFEATER
+                    <p class="subtitle">Wine • Meat • Friends</p>
+                </h1>
+            </a>
+        
+            <button class="header__burger-btn" id="burger">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="menu">
+                <ul type="none" class="menu__list">
+                    <li class="price">Price
+                        <div class="price-input">
+                            <input type="text" class="price-w">
+                            <span>-</span>
+                            <input type="text" class="price-w">
+                        </div>  
+                    </li>
+                    <li class="year">Year
+                        <div class="price-input">
+                            <input type="text" class="price-w">
+                            <span>-</span>
+                            <input type="text" class="price-w">
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <button class="menu__link" onclick="toggleDropdown('drop-category', 'caret-category')">Category
+                            <svg class="caret" id="caret-category" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                            </svg>
+                        </button>                          
+                            <div class="dropdown" id="drop-category">
+                            <button class="filter-btn">White
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Red
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Orange
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Champagne
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Sparkling
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Rose
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Non-alcoholic
+                                <a href="#"></a>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <button class="menu__link" onclick="toggleDropdown('drop-country', 'caret-country')">
+                            Country
+                            <svg class="caret" id="caret-country" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                            </svg>
+                        </button> 
+                        <div class="dropdown" id="drop-country">
+                            <button class="filter-btn">Italy
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Germany
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">France
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Hungary
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Spain
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">New Zealand
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Russia
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Portugal
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">USA
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Australia
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Chile
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">SAR
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Austria
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Kazakhstan
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Georgia
+                                <a href="#"></a>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <button class="menu__link" onclick="toggleDropdown('drop-sugar', 'caret-sugar')">
+                            Sugar
+                            <svg class="caret" id="caret-sugar" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                            </svg>
+                        </button> 
+                        <div class="dropdown" id="drop-sugar">
+                            <button class="filter-btn">Dry
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Semi-dry
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Sweet
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Brut
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">Extra-brut
+                                <a href="#"></a>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <button class="menu__link" onclick="toggleDropdown('drop-vol', 'caret-vol')">
+                            Volume
+                            <svg class="caret" id="caret-vol" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                            </svg>
+                        </button> 
+                        <div class="dropdown" id="drop-vol">
+                            <button class="filter-btn">1.5
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">0.75
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">0.7
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">0.5
+                                <a href="#"></a>
+                            </button>
+                            <button class="filter-btn">0.375
+                                <a href="#"></a>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>  
+    <div class="search__row">
+        <input type="text" class="search-bar" id="search-line" placeholder="Search...">  
+        <span class="cross"></span>
+    </div>
+    <aside class="pos-page" id="main">
+        <h1 class="wine-name">Wine Name</h1>
+        <span class="line"></span>
+        <div class="wine-info">
+            <img class="wine-img" src="jpg\waterford.jpg" alt="Waterford Estate Stellenbosch">
+            <div class="divicon">
+                <h2 class="description"><img class="wine-tasting" src="png\wine-tasting.png" alt="Wine Tasting"> Tasting Notes
+                    <p class="notes">
+                        Plush red cherry and exotic fruits, with touches of earthy clove spice. The palate has earthy, savory flavours along with delicate try tannins and soft freshness to carry the fruit. Pairs very well with local venison complimented with elements of bacon, cloves and a stewed fruit chutney.
+                    </p>
+                </h2>
+            </div>
+            <div class="divicon">
+                <img class="wine-take" src="png\wine-box.png" alt="Wine Takeaway Icon">
+                <h2 class="price-take">Takeaway Price
+                    <p class="num">100.00</p>
+                </h2>
+            </div>
+            <div class="divicon">
+                <img class="winehere" src="png\wine.png" alt="Wine Here Icon">
+                <h2 class="price-res">Restautant Price
+                    <p class="num">100.00</p>
+                </h2>
+            </div>
+        </div class="wine-info">
+    </aside>
+    <div class="nums-mobile" id="mobile">
+        <p>10000</p>
+        <p>12000</p>
+    </div>
+</body>
+</html>

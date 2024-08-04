@@ -1,0 +1,495 @@
+body {
+    margin: 0;
+}
+
+.header {
+    background-color: #B82A2A;
+    max-width: 100%;
+    width: 100%;
+    height: 100px;
+}
+
+.brand {
+    text-decoration: none;
+    color: #fff;
+    height: 100px;
+    width: 265px;
+}
+
+.header__container {
+    position: absolute;
+    display: flex;
+}
+
+.title {
+    line-height: 15px;
+    margin-left: 15px;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 800;
+}
+
+.subtitle {
+    font-family: 'Roboto Slab';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.menu {
+    flex-wrap: wrap;
+    width: 350px;
+    position: relative;
+    margin-top: 100px;;
+    margin-left: -295px;
+    line-height: 3;
+    font-family: 'Inknut Antiqua';
+    font-style: normal;
+    font-size: large;
+}
+
+.menu__list {
+    padding-top: 5px;
+}
+
+.menu__link {
+    text-decoration: none;
+    color: #000;
+    border: none;
+    width: fit-content;
+    justify-content: start;
+    font-size: large;
+}
+
+.caret {
+    margin-left: 15px;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+.rotate {
+    transform: rotate(0deg);
+}
+
+button {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: inline-flex;
+    height: 45px;
+    width: auto;
+    font-family: 'Kadwa';
+    background-color: transparent;
+    color: #C5912B;
+    border: 2px solid #C5912B;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+button:hover {
+    color: #B82A2A;
+    border-color: #B82A2A;
+}
+
+button.active {
+    border-color: #B82A2A;
+    background-color: #B82A2A;
+    color: #fff;
+    
+}
+
+
+.menu__link:hover {
+    color: #000;
+}
+
+.dropdown {
+    margin: 7.5px 0;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 5px 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-in-out;
+}
+
+.dropdown.show {
+    gap: 5px 5px;
+    display: flex;
+    max-height: 250px;
+    flex-wrap: wrap;
+    margin: 7.5px 0;
+}
+
+.header__burger-btn {
+    display: none;
+    position: relative;
+    width: 35px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    top: 120px;
+    cursor: pointer;
+}
+
+.header__burger-btn span {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    left: 2.5px;
+    top: 10px;
+    background-color: black;
+    z-index: 3;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.header__burger-btn span:nth-child(1) {
+    transform: translateY(8px);
+}
+
+.header__burger-btn span:nth-child(3) {
+    transform: translateY(-8px);
+}
+
+.header.open .header__burger-btn span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.header.open .header__burger-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.header.open .header__burger-btn span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.search-bar {
+    position: absolute;
+    display: flex;
+    margin: 10px;
+    right: 120px;
+    width: 40%;
+    max-width: 100%;
+    height: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-family: 'IBM Plex Sans';
+    font-weight: 500;
+    font-size: 16px;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    
+}
+
+.cross {
+    position: absolute;
+    top: 125px;
+    right: 140px;
+    width: 15px;
+    height: 15px;
+}
+
+.cross::before {
+    position: absolute;
+    content: '';
+    cursor: pointer;
+    width: 3px;
+    height: 15px;
+    background: #ccc;
+    transform: rotate(45deg);
+}
+
+.cross::after {
+    position: absolute;
+    content: '';
+    cursor: pointer;
+    width: 3px;
+    height: 15px;
+    background: #ccc;
+    transform: rotate(-45deg);
+}
+
+.search-bar::placeholder {
+    font-size: 16px;
+}
+
+.search-bar:focus {
+    border-color: #B82A2A;
+    box-shadow: 0 0 5px rgba(184, 42, 42, 0.5);
+}
+
+.pos-page {
+    top: 100px;
+    left: 320px;
+    text-align: center;
+    position: relative;
+    width: 70%;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.wine-name {
+    font-size: 35px;
+    color: #C5912B;
+    font-weight: normal;
+}
+
+.line {
+    position: sticky;
+    display: flex;
+    height: 1px;
+    background-color: #B58229;
+    width: 100%;
+}
+
+.price, .year {
+    cursor: default;
+}
+
+.price-input {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.price-w {
+    position: relative;
+    display: flex;
+    width: 50px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-family: 'IBM Plex Sans';
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.price-w:focus {
+    border-color: #B82A2A;
+    box-shadow: 0 0 5px rgba(184, 42, 42, 0.5);
+}
+
+.price-w:focus {
+    border-color: #B82A2A;
+    box-shadow: 0 0 5px rgba(184, 42, 42, 0.5);
+}
+
+.wine-info {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    text-align: left;
+}
+
+.description {
+    font-family: 'Inknut Antiqua';
+    font-style: normal;
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
+.notes {
+    font-family: 'Inknut Antiqua';
+    font-style: normal;
+    font-size: 1.2vw;
+    font-weight: normal;
+    user-select: text;
+}
+
+.num {
+    font-family: 'Inknut Antiqua';
+    font-style: normal;
+    font-size: 1.2vw;
+    font-weight: normal;
+}
+
+.price-take, .price-res {
+    font-family: 'Inknut Antiqua';
+    font-style: normal;
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
+.divicon {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.wine-img {
+    position: relative;
+    top: 15px;
+    width: 250px;
+    height: 409px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: start;
+}
+
+.nums-mobile {
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+@media (max-width: 1205px) {
+    .nums-mobile {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+        top: 735px;
+        left: 370px;
+        font-family: 'Inknut Antiqua';
+    }
+
+    .winehere {
+        position: absolute;
+        left: 0;
+        top: 450px;
+    }
+
+    .wine-take {
+        position: absolute;
+        left: 0;
+        top: 500px;
+    }
+
+    .price-res, .price-take {
+        display: none;
+    }
+
+    .pos-page {
+        width: 60%;
+    }
+
+}
+@media (max-width: 980px) {
+    .header__burger-btn {
+        display: block;
+        left: -255px;
+    }
+    
+    .menu {
+        display: flex;
+        position: absolute;
+        left: -400px;
+        top: 50px;
+        width: 380px;
+        background-color: transparent;
+        padding: 0 20px 20px;
+        transition: transform 0.5s;
+        margin-left: -45px;
+    }
+    
+    .menu__link {
+        text-decoration: none;
+        color: black;
+        font-style: normal;
+        display: flex;
+        padding: 10px 0 0;
+        font-size: large;
+        justify-content: start;
+    }
+    
+    .header.open .menu {
+        transform: translateX(400px);
+    }
+    
+    .search-bar {
+        right: 10px;
+        width: 70%;
+    }
+    
+    .cross {
+        position: absolute;
+        top: 125px;
+        right: 30px;
+        width: 15px;
+        height: 15px;
+    }
+    
+    .pos-page {
+        display: block;
+        position: relative;
+        width: 100%;
+        top: 100px;
+        left: 0;
+        text-align: left;
+    }
+
+    .wine-name {
+        margin-left: 15px;
+    }
+
+    .winehere {
+        position: absolute;
+        left: 15px;
+        top: 260px;
+    }
+
+    .wine-take {
+        position: absolute;
+        left: 15px;
+        top: 310px;
+    }
+    
+    .line {
+        height: 0.5px;
+        background-color: #B58229;
+        margin: 0 auto;
+    }
+
+
+    .pos-page.hidden {
+        opacity: 0;
+        cursor: default;
+    }
+
+    .nums-mobile.hidden {
+        opacity: 0;
+        cursor: default;
+    }
+
+    .wine-img {
+        position: relative;
+        margin-top: 15px;
+        width: 150px;
+        height: 209px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: start;
+        left: 15px;
+    }
+
+    .description {
+        font-family: 'Inknut Antiqua';
+        font-style: normal;
+        font-size: small;
+        font-weight: bold;
+    }
+    
+    .notes {
+        font-family: 'Inknut Antiqua';
+        font-style: normal;
+        font-size: 10px;
+        font-weight: normal;
+        user-select: text;
+    }
+
+    .nums-mobile {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+        top: 550px;
+        left: 60px;
+        font-family: 'Inknut Antiqua';
+    }
+}

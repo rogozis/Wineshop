@@ -1,0 +1,357 @@
+body {
+    margin: 0;
+}
+
+.header {
+    background-color: #B82A2A;
+    max-width: 100%;
+    width: 100%;
+    height: 100px;
+}
+
+.brand {
+    text-decoration: none;
+    color: #fff;
+    height: 100px;
+    width: 265px;
+}
+
+.header__container {
+    display: flex;
+}
+
+.title {
+    line-height: 15px;
+    margin-left: 15px;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 800;
+}
+
+.subtitle {
+    font-family: 'Roboto Slab';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.menu {
+    flex-wrap: wrap;
+    width: 350px;
+    position: relative;
+    margin-top: 100px;;
+    margin-left: -295px;
+    line-height: 3;
+    font-family: 'Inknut Antiqua';
+    font-style: normal;
+    font-size: large;
+}
+
+.menu__list {
+    padding-top: 5px;
+}
+
+.menu__link {
+    text-decoration: none;
+    color: #000;
+    border: none;
+    width: fit-content;
+    justify-content: start;
+    font-size: large;
+}
+
+.caret {
+    margin-left: 15px;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+.rotate {
+    transform: rotate(0deg);
+}
+
+button {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: inline-flex;
+    height: 45px;
+    width: auto;
+    font-family: 'Kadwa';
+    background-color: transparent;
+    color: #C5912B;
+    border: 2px solid #C5912B;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+button:hover {
+    color: #B82A2A;
+    border-color: #B82A2A;
+}
+
+button.active {
+    border-color: #B82A2A;
+    background-color: #B82A2A;
+    color: #fff;
+    
+}
+
+
+.menu__link:hover {
+    color: #000;
+}
+
+.dropdown {
+    margin: 7.5px 0;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 5px 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-in-out;
+}
+
+.dropdown.show {
+    gap: 5px 5px;
+    display: flex;
+    max-height: 250px;
+    flex-wrap: wrap;
+    margin: 7.5px 0;
+}
+
+.header__burger-btn {
+    display: none;
+    position: relative;
+    width: 35px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    top: 120px;
+    cursor: pointer;
+}
+
+.header__burger-btn span {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    left: 2.5px;
+    top: 10px;
+    background-color: black;
+    z-index: 3;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.header__burger-btn span:nth-child(1) {
+    transform: translateY(8px);
+}
+
+.header__burger-btn span:nth-child(3) {
+    transform: translateY(-8px);
+}
+
+.header.open .header__burger-btn span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.header.open .header__burger-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.header.open .header__burger-btn span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.search-bar {
+    position: absolute;
+    display: flex;
+    margin: 10px;
+    right: 120px;
+    width: 40%;
+    max-width: 100%;
+    height: 20px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-family: 'IBM Plex Sans';
+    font-weight: 500;
+    font-size: 16px;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    
+}
+
+.cross {
+    position: absolute;
+    top: 125px;
+    right: 140px;
+    width: 15px;
+    height: 15px;
+}
+
+.cross::before {
+    position: absolute;
+    content: '';
+    cursor: pointer;
+    width: 3px;
+    height: 15px;
+    background: #ccc;
+    transform: rotate(45deg);
+}
+
+.cross::after {
+    position: absolute;
+    content: '';
+    cursor: pointer;
+    width: 3px;
+    height: 15px;
+    background: #ccc;
+    transform: rotate(-45deg);
+}
+
+.search-bar::placeholder {
+    font-size: 16px;
+}
+
+.search-bar:focus {
+    border-color: #B82A2A;
+    box-shadow: 0 0 5px rgba(184, 42, 42, 0.5);
+}
+
+.main-page {
+    position: sticky;
+    display: block;
+    width: 75vw;
+    text-align: center;
+    margin: 100px 300px;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.popular {
+    font-size: 35px;
+    color: #C5912B;
+    font-weight: normal;
+}
+
+.line {
+    position: absolute;
+    display: flex;
+    height: 0.5px;
+    background-color: #B58229;
+    width: 100%;
+}
+
+.price, .year {
+    cursor: default;
+}
+
+.price-input {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.price-w {
+    position: relative;
+    display: flex;
+    width: 50px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-family: 'IBM Plex Sans';
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.price-w:focus {
+    border-color: #B82A2A;
+    box-shadow: 0 0 5px rgba(184, 42, 42, 0.5);
+}
+
+.price-w:focus {
+    border-color: #B82A2A;
+    box-shadow: 0 0 5px rgba(184, 42, 42, 0.5);
+}
+
+@media (max-width: 1205px) {
+    .main-page {
+        width: 62%;
+    }
+}
+
+@media (max-width: 980px) {
+    .header__burger-btn {
+        display: block;
+        left: -255px;
+    }
+    
+    .menu {
+        display: flex;
+        position: absolute;
+        left: -400px;
+        top: 50px;
+        width: 380px;
+        background-color: transparent;
+        padding: 0 20px 20px;
+        transition: transform 0.5s;
+        margin-left: -45px;
+    }
+    
+    .menu__link {
+        text-decoration: none;
+        color: black;
+        font-style: normal;
+        display: flex;
+        padding: 10px 0 0;
+        font-size: large;
+        justify-content: start;
+    }
+    
+    .header.open .menu {
+        transform: translateX(400px);
+    }
+    
+    .search-bar {
+        right: 10px;
+        width: 70%;
+    }
+    
+    .cross {
+        position: absolute;
+        top: 125px;
+        right: 30px;
+        width: 15px;
+        height: 15px;
+    }
+    
+    .main-page {
+        display: block;
+        position: relative;
+        text-align: left;
+        margin: 100px 0;
+        width: 100%;
+    }
+    
+    .popular{
+        margin-left: 15px;
+    }
+
+    .line {
+        height: 0.5px;
+        background-color: #B58229;
+        width: 100vw;
+        margin: 0 auto;
+    }
+
+
+    .main-page.hidden {
+        opacity: 0;
+        cursor: default;
+    }
+}
