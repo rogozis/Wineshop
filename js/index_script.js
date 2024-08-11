@@ -76,3 +76,8 @@ reset.onclick = function () {
         button.classList.remove('active');
     });
 }
+
+// ---Restrict input type number 
+function validateInput(input) {
+    input.value = input.value.replace(/[^0-9]/g, '');
+}

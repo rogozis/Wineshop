@@ -164,9 +164,6 @@ button.active {
 }
 
 .search-bar {
-    position: absolute;
-    display: flex;
-    margin: 10px;
     right: 120px;
     width: 40%;
     max-width: 100%;
@@ -183,9 +180,10 @@ button.active {
 }
 
 .search__row {
+    width: 91.5%;
     display: flex;
     justify-content: flex-end;
-    margin: 25px;
+    margin: 15px;
     gap: 15px;
 }
 
@@ -200,9 +198,9 @@ button.active {
 }
 
 .cross {
-    position: absolute;
-    top: 125px;
-    right: 140px;
+    position: relative;
+    top: 14px;
+    right: 40px;
     width: 15px;
     height: 15px;
 }
@@ -336,13 +334,13 @@ button.active {
     
     .search-bar {
         right: 10px;
-        width: 70%;
+        width: 50%;
     }
     
     .cross {
-        position: absolute;
-        top: 125px;
-        right: 30px;
+        position: relative;
+        top: 14px;
+        right: 40px;
         width: 15px;
         height: 15px;
     }

@@ -24,7 +24,7 @@
         <div class="container header__container">
             <a href="index.html" class="brand">
                 <h1 class="title">BEEFEATER
-                    <p class="subtitle">Wine • Meat • Friends</p>
+                    <p class="subtitle">Meat • Wine • Friends</p>
                 </h1>
             </a>
             <button class="header__burger-btn" id="burger">
@@ -34,20 +34,21 @@
                 <ul type="none" class="menu__list">
                     <li class="price">Price
                         <div class="price-input">
-                            <input type="text" class="price-w">
+                            <input type="text" class="price-w" oninput="validateInput(this)">
                             <span>-</span>
-                            <input type="text" class="price-w">
+                            <input type="text" class="price-w" oninput="validateInput(this)">
                         </div>  
                     </li>
                     <li class="year">Year
                         <div class="price-input">
-                            <input type="text" class="price-w">
+                            <input type="text" class="price-w" oninput="validateInput(this)">
                             <span>-</span>
-                            <input type="text" class="price-w">
+                            <input type="text" class="price-w" oninput="validateInput(this)">
                         </div>
                     </li>
                     <li class="menu__item">
-                        <button class="menu__link" onclick="toggleDropdown('drop-category', 'caret-category')">Category
+                        <button class="menu__link" onclick="toggleDropdown('drop-category', 'caret-category')">
+                            Category
                             <svg class="caret" id="caret-category" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                 <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                             </svg>
