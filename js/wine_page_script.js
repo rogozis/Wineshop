@@ -58,3 +58,22 @@ clear.onclick = function () {
     searchLine.value='';
     searchLine.focus();
 } 
+
+// --- Filter reset button 
+
+const reset = document.querySelector('.reset');
+reset.onclick = function () {
+    const buttons = document.querySelectorAll('.filter-btn');
+    const priceFilter = document.querySelectorAll('.price-w');
+    priceFilter.forEach(priceFilter => {
+        priceFilter.value='';
+    })
+    buttons.forEach(button => {
+        button.classList.remove('active');
+    });
+}
+
+// ---Restrict input type number 
+function validateInput(input) {
+    input.value = input.value.replace(/[^0-9]/g, '');
+}

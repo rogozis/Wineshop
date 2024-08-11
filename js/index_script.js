@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 })
 
-// ---
-
 // --- Filter buttons selection
 
 function toggleButton(button) {

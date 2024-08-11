@@ -6,7 +6,7 @@
     <title>BEEFEATER</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="png\free-icon-wine-glass-763089.png">
+    <link rel="icon" type="image/png" href="imgs\free-icon-wine-glass-763089.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,16 +35,16 @@
                 <ul type="none" class="menu__list">
                     <li class="price">Price
                         <div class="price-input">
-                            <input type="text" class="price-w">
+                            <input type="text" class="price-w" oninput="validateInput(this)">
                             <span>-</span>
-                            <input type="text" class="price-w">
+                            <input type="text" class="price-w" oninput="validateInput(this)">
                         </div>  
                     </li>
                     <li class="year">Year
                         <div class="price-input">
-                            <input type="text" class="price-w">
+                            <input type="text" class="price-w" oninput="validateInput(this)">
                             <span>-</span>
-                            <input type="text" class="price-w">
+                            <input type="text" class="price-w" oninput="validateInput(this)">
                         </div>
                     </li>
                     <li class="menu__item">
@@ -187,6 +187,7 @@
         </div>
     </header>  
     <div class="search__row">
+        <button class="reset" id="reset-btn" onclick="reset()">Reset filters</button>
         <input type="text" class="search-bar" id="search-line" placeholder="Search...">  
         <span class="cross"></span>
     </div>
@@ -194,22 +195,22 @@
         <h1 class="wine-name">Wine Name</h1>
         <span class="line"></span>
         <div class="wine-info">
-            <img class="wine-img" src="jpg\waterford.jpg" alt="Waterford Estate Stellenbosch">
+            <img class="wine-img" src="imgs\waterford.jpg" alt="Waterford Estate Stellenbosch">
             <div class="divicon">
-                <h2 class="description"><img class="wine-tasting" src="png\wine-tasting.png" alt="Wine Tasting"> Tasting Notes
+                <h2 class="description"><img class="wine-tasting" src="imgs\wine-tasting.png" alt="Wine Tasting"> Tasting Notes
                     <p class="notes">
                         Plush red cherry and exotic fruits, with touches of earthy clove spice. The palate has earthy, savory flavours along with delicate try tannins and soft freshness to carry the fruit. Pairs very well with local venison complimented with elements of bacon, cloves and a stewed fruit chutney.
                     </p>
                 </h2>
             </div>
             <div class="divicon">
-                <img class="wine-take" src="png\wine-box.png" alt="Wine Takeaway Icon">
+                <img class="wine-take" src="imgs\wine-box.png" alt="Wine Takeaway Icon">
                 <h2 class="price-take">Takeaway Price
                     <p class="num">100.00</p>
                 </h2>
             </div>
             <div class="divicon">
-                <img class="winehere" src="png\wine.png" alt="Wine Here Icon">
+                <img class="winehere" src="imgs\wine.png" alt="Wine Here Icon">
                 <h2 class="price-res">Restautant Price
                     <p class="num">100.00</p>
                 </h2>
