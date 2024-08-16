@@ -11,7 +11,9 @@ afterAll(async () => {
     server.close();
 });
 
-test('should save new wine to the database', async () => { 
+// Wine addition part
+
+test('should save new wine to the database and find it', async () => { 
     const newWine = new Wine({
         name: 'Nuala',
         country: 'New Zealand',
@@ -30,4 +32,11 @@ test('should save new wine to the database', async () => {
     expect(savedWine.description).toBe('Tasty');
     expect(savedWine.price).toBe(10000);
     expect(savedWine.id).toBe(10);
+    
+    // Wine finding part
+    
+    const foundWine = await Wine.find({ name: { $regex: 'Nuala', $options: 'i' } });
+    expect(foundWine.length).toBeGreaterThan(0);
 });
+
+
