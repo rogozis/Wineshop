@@ -31,13 +31,13 @@ async function addNewWine(wineData) {
 // Exact wine addition template
 
 const template = {
-    name: 'Wine',
-    country: 'Country',
-    year: 2018,
+    name: 'Colterenzio Pfefferer',
+    country: 'Italy',
+    year: 2020,
     description: 'Taste',
     price: 10000,
-    sugar: 'Sugar',
-    category: 'Category',
+    sugar: 'Semi-dry',
+    category: 'White',
     id: 100
 }
 
@@ -78,11 +78,10 @@ async function deleteWine(id) {
     }
 }
 
-// Functions execution
+// Function execution
 
 // (async () => {
 //     await addNewWine(template);
-//     await searchWines({ name: 'Nuala' });
 // })();
 
 // Search routes

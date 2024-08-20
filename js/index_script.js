@@ -22,8 +22,6 @@ buttons.forEach(button => {
     });
 });
 
-// ---
-
 // --- Dropdown menu toggle
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -57,8 +55,10 @@ window.toggleDropdown = function(dropdownId, caretId) {
 const clear = document.querySelector('.cross');
 clear.onclick = function () {
     const searchLine = document.getElementById('search-line');
+    const dropdown = document.getElementById('dropdown');
     searchLine.value='';
     searchLine.focus();
+    dropdown.style.display = 'none';
 } 
 
 // --- Filter reset button 
