@@ -6,7 +6,7 @@
     <title>BEEFEATER</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="png\free-icon-wine-glass-763089.png">
+    <link rel="icon" type="image/png" href="imgs\free-icon-wine-glass-763089.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +18,7 @@
     
     <!-- JS -->
     <script defer src="js\index_script.js"></script>
+    <script defer src="js\search-func.js"></script>
     <script defer src="js\server.js"></script>
 </head>
 <body>
@@ -190,16 +191,12 @@
     <div class="search__row">
         <button class="reset" id="reset-btn" onclick="reset()">Reset filters</button>
         <input type="text" class="search-bar" id="search-line" placeholder="Search...">  
+        <div id="dropdown"></div>
         <span class="cross"></span>
     </div>
     <aside class="main-page" id="main">
         <h1 class="popular">Popular</h1>
         <span class="line"></span>
-        <div class="things-found">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
     </aside>
 </body>
 </html>

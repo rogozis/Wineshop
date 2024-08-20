@@ -13,7 +13,7 @@ afterAll(async () => {
 
 // Wine addition part
 
-test('should save new wine to the database and find it', async () => { 
+test('should save new wine to the database, find it and then delete', async () => { 
     const newWine = new Wine({
         name: 'Nuala',
         country: 'New Zealand',
@@ -37,6 +37,11 @@ test('should save new wine to the database and find it', async () => {
     
     const foundWine = await Wine.find({ name: { $regex: 'Nuala', $options: 'i' } });
     expect(foundWine.length).toBeGreaterThan(0);
-});
+
+    // Wine deletion part
+
+    const wipe = await Wine.deleteMany({ name: { $regex: 'Nuala', $options: 'i' } });
+    expect(wipe.deletedCount).toBe(1);
+}); 
 
 
