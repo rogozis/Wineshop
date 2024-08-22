@@ -130,6 +130,7 @@ button.active {
     background-color: transparent;
     top: 120px;
     cursor: pointer;
+    z-index: 1;
 }
 
 .header__burger-btn span {

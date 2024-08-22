@@ -77,22 +77,3 @@ reset.onclick = function () {
 function validateInput(input) {
     input.value = input.value.replace(/[^0-9]/g, '');
 }
-
-// Wine finding function client side
-
-const searchInput = document.getElementById('search-line');
-const resultList = document.getElementById('main');
-const wines = await response.json();
-
-resultList.addEventListener('input', async () => {
-    const query = searchInput.value;
-    const response = await fetch(`/api/wines?q=${query}`);
-    const wines = await response.json();
-
-    resultList.innerHTML = '';
-    wines.forEach(wine => {
-        const li = document.createElement('li');
-        li.textContent = '${wine.name} - ${wine.country}';
-        resultList.appendChild(li);
-    });
-});

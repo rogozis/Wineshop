@@ -18,8 +18,9 @@
     
     <!-- JS -->
     <script defer src="js\wine_page_script.js"></script>
+    <script defer src="js\search-func.js"></script>
     <script defer src="js\server.js"></script>
-</head>
+</head> 
 <body>
     <header class="header">
         <div class="container header__container">
@@ -189,7 +190,8 @@
     </header>  
     <div class="search__row">
         <button class="reset" id="reset-btn" onclick="reset()">Reset filters</button>
-        <input type="text" class="search-bar" id="search-line" placeholder="Search...">  
+        <input type="text" class="search-bar" id="search-line" placeholder="Search...">
+        <div id="dropdown"></div>  
         <span class="cross"></span>
     </div>
     <aside class="pos-page" id="main">
